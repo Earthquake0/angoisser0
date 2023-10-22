@@ -1,1 +1,5 @@
-Just enjoy.
+It's a reverse shell fpr MacOS Sonoma and the "extra security" added (mostly popup windows with confirmation needed)
+This script will open the terminal, open a remote connexion beteween the Mac and another computer listening to port 9000 (connected on the same network).
+You need to replace REPLACE_WITH_LOCAL_IP_OF_YOUR_ATTACKER_COMPUTER with your IP (like 192.168.1.30 for exemple).
+Then it closes the terminal window without closing the connexion (a little bit like an @echo off).
+Note that you will need to physically access the victim machine (unlocked) since it's a DuckyScript. You can disconnect the flipper0 once injected and walk away.
